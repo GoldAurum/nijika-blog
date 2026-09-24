@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+<section style="text-align: center;">
+	<h1>Bienvenido a nijika.osaka</h1>
+	<p style="opacity: 60%">Este es un Blog de alguien al que llaman Gold y eso</p>
+</section>
+<br />
+
+<hr style="text-align: center;" />
+
+<section>
+	<h2>Blog Posts</h2>
+	{% for post in collections.posts %}
+	<article class="post" data-tags="{{ post.data.tags | join(' ') }}">
+		<h3 class="title">
+			<a href="{{ post.url }}">{{ post.data.title }}</a>
+		</h3>
+
+		<div class="post-info" style="overflow: auto">
+			<div class="tags" style="float: left">
+				{% for tag in post.data.tags %}
+				<span class="tag" data-tag="{{ tag }}">{{ tagLabels[tag] | default(tag) }}</span>
+				{% endfor %}
+			</div>
+
+			<p class="creation-date" style="float: right">
+				{{ post.data.date | postDate }}
+			</p>
+		</div>
+	</article>
+	{% endfor %}
+
+</section>
+

@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<section>
+	<h1>{{ title }}</h1>
+	{% if date %}<p>{{ date | postDate }}</p>{% endif %}
+	{% if description %}<p style="opacity: 60%">{{ description }}</p>{% endif %}
+</section>
+
+<hr />
+
+<section>
+	{{ content | safe }}
+</section>
+
+<p style="opacity: 60%; text-align: right">by {{ author | default("Gold") }}</p>

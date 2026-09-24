@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: "Reseñas"
+permalink: "reviews.html"
+---
+<section>
+	<h2>Reseñas</h2>
+	
+	{% if review %}
+		{% for review in collections.reviews %}
+		<article class="review-post" data-tags="{{ review.data.tags | join(' ') }}">
+			<a href="{{ review.url }}"><img class="review-poster" src="{{ review.data.poster }}" /></a>
+
+			<div class="review-content">
+				<h2><a href="{{ review.url }}">{{ review.data.title }}</a></h2>
+
+				<div class="review-meta">
+					{% for tag in review.data.tags %}
+					<span class="tag" data-tag="{{ tag }}">{{ tagLabels[tag] | default(tag) }}</span>
+					{% endfor %}
+					<span class="rating">{{ review.data.rating }}</span>
+				</div>
+			</div>
+		</article>
+	{% endfor %}
+	{% else %}
+	<p class="nada">No hay paginas aun :/</p>	
+	{% endif %}
+</section>
