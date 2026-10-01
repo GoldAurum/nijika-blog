@@ -3,7 +3,11 @@ layout: layouts/base.njk
 ---
 <section>
 	<h1>{{ title }}</h1>
-	{% if date %}<p>{{ date | postDate }}</p>{% endif %}
+	<div class="post-meta">
+		{% if date %}<span class="post-date">{{ date | postDate }}</span>{% endif %}
+		{% if likes %}{% include "partials/likes.njk" %}{% endif %}
+		{% if views %}{% include "partials/views.njk" %}{% endif %}
+	</div>
 	{% if description %}<p style="opacity: 60%">{{ description }}</p>{% endif %}
 </section>
 
