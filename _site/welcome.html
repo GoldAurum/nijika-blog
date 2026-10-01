@@ -33,7 +33,18 @@
 
 		<section>
 	<h1>Bienvenido</h1>
-	<p>18/07/2026, 08:30</p>
+	<div class="post-meta">
+		<span class="post-date">18/07/2026, 08:30</span>
+		<div class="likes" data-post-id="/welcome.html">
+	<button class="like-button" type="button" aria-pressed="false">
+		<span class="like-icon">♥</span>
+		<span class="like-count">–</span>
+	</button>
+</div>
+
+		<span class="views">👁️ <span class="views-count" data-post-id="/welcome.html">–</span></span>
+
+	</div>
 	<p style="opacity: 60%">Este es el primer post que escribo en este blog</p>
 </section>
 
@@ -62,7 +73,9 @@ La creacion de este blog esta siendo una experiencia que sin duda alguna repitir
 		</div>
 
 		<audio id="nijika-sound" src="/assets/nijika.mp3" preload="auto"></audio>
-
+		
+		<script src="/assets/scripts/views.js"></script>
+		<script src="/assets/scripts/likes.js"></script>
 		<script src="/assets/scripts/tags.js"></script>
 		<script src="/assets/scripts/page-style-mode.js"></script>
 		<script src="/assets/scripts/nijika-sound.js"></script>

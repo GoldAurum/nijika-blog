@@ -2,6 +2,8 @@
 title: "Bienvenido"
 description: "Este es el primer post que escribo en este blog"
 date: 2026-07-18T08:30:00+02:00
+likes: true
+views: true
 tags: ["personal"]
 author: "Gold"
 layout: layouts/post.njk
