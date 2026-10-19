@@ -35,4 +35,9 @@ eleventyConfig.addFilter("postDate", (date) => {
 		htmlTemplateEngine: "njk",
 		templateFormats: ["njk", "md", "html"],
 	};
+
+	eleventyConfig.addShortcode("likes", function (iid) {
+		return `<ws-widget type="like" iid="${escapeHtml(iid)}"></ws-widget>`;
+});
+
 }
