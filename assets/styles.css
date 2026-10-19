@@ -386,53 +386,7 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     gap: 14px;
 }
- 
+
 .post-date {
     opacity: 0.6;
-}
- 
-.likes {
-    display: inline-flex;
-    align-items: center;
-}
- 
-.like-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: 99px;
-    background: var(--card);
-    color: var(--text);
-    font-size: 0.9rem;
-    font-family: inherit;
-    cursor: pointer;
-}
- 
-.like-button .like-icon {
-    color: var(--text);
-    opacity: 0.6;
-    transition: transform 0.15s ease, color 0.15s ease, opacity 0.15s ease;
-}
- 
-.like-button:hover .like-icon {
-    transform: scale(1.15);
-}
- 
-.like-button.liked {
-    cursor: default;
-}
- 
-.like-button.liked .like-icon {
-    color: gold;
-    opacity: 1;
-}
- 
-.views {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    opacity: 0.6;
-    font-size: 0.9rem;
-    font-family: inherit;
 }
