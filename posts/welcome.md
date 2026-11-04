@@ -1,7 +1,7 @@
 ---
 title: "Bienvenido"
 description: "Este es el primer post que escribo en este blog"
-date: 2026-07-18T08:30:00+02:00
+date: 2026-07-18T08:30:00
 likes: 20785
 tags: ["personal"]
 author: "Gold"
