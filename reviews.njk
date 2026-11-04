@@ -6,22 +6,29 @@ permalink: "reviews.html"
 <section>
 	<h2>Reseñas</h2>
 
-	{% for review in collections.reviews %}
-	<article class="review-post" data-tags="{{ review.data.tags | join(' ') }}">
-		<a href="{{ review.url }}"><img class="review-poster" src="{{ review.data.poster }}" /></a>
+	<div class="review-grid">
+		{% for review in collections.reviews %}
+		<article class="review-card">
+			<a href="{{ review.url }}">
+				<img class="review-card-poster" src="{{ review.data.poster }}" alt="{{ review.data.title }}" />
+			</a>
 
-		<div class="review-content">
-			<h2><a href="{{ review.url }}">{{ review.data.title }}</a></h2>
+    <div class="review-card-info">
+	    <div class="review-card-line">
+		    <a class="review-card-title" href="{{ review.url }}">{{ review.data.title }}</a>
+		    <span class="review-card-sep">|</span>
+		    <span class="rating">{{ review.data.rating }}</span>
+	    </div>
 
-			<div class="review-meta">
-				{% for tag in review.data.tags %}
-				<span class="tag" data-tag="{{ tag }}">{{ tagLabels[tag] | default(tag) }}</span>
-				{% endfor %}
-				<span class="rating">{{ review.data.rating }}</span>
-			</div>
-		</div>
-	</article>
-	{% else %}
-	<p class="nada">no hay nada todavia :/</p>
-	{% endfor %}
+	    <div class="review-card-tags">
+		    {% for tag in review.data.tags %}
+		    <span class="tag" data-tag="{{ tag }}">{{ tagLabels[tag] | default(tag) }}</span>
+		    {% endfor %}
+	    </div>
+    </div>
+		</article>
+		{% else %}
+		<p class="nada">no hay nada todavia :/</p>
+		{% endfor %}
+	</div>
 </section>

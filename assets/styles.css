@@ -390,3 +390,62 @@ input:checked + .slider:before {
 .post-date {
     opacity: 0.6;
 }
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.review-card {
+    padding: 10px;
+    gap: 10px;
+}
+
+.review-card-poster {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.review-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.review-card-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.review-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.review-card .tag {
+    font-size: 0.7rem;
+    padding: 0 5px;
+}
+
+.review-card .tag::before {
+    margin-right: 3px;
+}
+
+.review-card-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.review-card-sep {
+    opacity: 0.8;
+}
